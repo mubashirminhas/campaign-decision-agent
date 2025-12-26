@@ -1,47 +1,72 @@
-# Campaign Decision Agent Dashboard
+### Campaign Decision Agent Dashboard
 
-A **professional Flask-based dashboard** for marketing campaign decision-making.  
-Upload campaign data (CSV), get **rule-based decisions**, view results in a **dynamic table**, and download as CSV.
+This project is a Flask-based web dashboard designed to help marketing teams make quick, data-driven decisions on campaign performance.
+Users can upload campaign data in CSV format, and the system automatically applies business rules to recommend actions such as scaling, optimizing, or pausing campaigns.
 
----
+The goal of this project is to demonstrate end-to-end application development, combining data processing, business logic, APIs, and a clean user interface.
 
-## **Features**
+## Key Features
 
-- Upload campaign CSV file.
-- Auto-generate **action decisions** using business rules.
-- **Dynamic table** that refreshes every 1 minute.
-- **Download decision results** as CSV.
-- Responsive and professional UI using flask & HTML.
+- Upload campaign performance data using a CSV file
 
----
-## Campaign (Business Rules)
-- IF CPC < 3 AND conversion_rate > 0.05 → SCALE
-- ELIF CPC < 5 → OPTIMIZE
-- ELSE → PAUSE
+- Automatically compute key metrics like CPC and conversion rate
 
-## 📸 Application Screenshots
+- Apply clear, rule-based logic to generate campaign decisions
 
-### Before Data Upload
-![Before Data Loading](Before_Data_Loading.png)
+- Display results in a dynamic table that refreshes every minute
 
-### After Data Upload & Decision Results
-![After Data Loading](After_Data_Loading.png)
+- Download the final decision output as a CSV file
 
-## **Folder Structure**
+- Simple, clean, and responsive UI built with Flask and HTML
 
+## Campaign Decision Logic (Business Rules)
+
+The decision engine follows straightforward and transparent rules:
+
+SCALE → CPC < 3 and conversion_rate > 0.05
+
+OPTIMIZE → CPC < 5
+
+PAUSE → All other cases
+
+These rules are implemented to mimic how marketing teams evaluate campaign efficiency and performance.
+
+## Application Screenshots
+Before Data Upload
+
+After Data Upload and Decision Results
+
+## Folder Structure
 agent_api/
 │
-├─ app.py
-├─ requirements.txt
-├─ data/
-│ └─ campaign_data.csv
-├─ agent/
-│ ├─ feature_engineering.py
-│ ├─ decision_agent.py
-│ └─ schemas.py
-├─ templates/
-│ └─ upload.html
+├── app.py                  # Flask application entry point
+├── requirements.txt        # Project dependencies
+├── data/
+│   └── campaign_data.csv   # Sample input data
+├── agent/
+│   ├── feature_engineering.py  # Derived metrics (CPC, conversion rate)
+│   ├── decision_agent.py       # Business rule engine
+│   └── schemas.py              # Data validation schemas
+├── templates/
+│   └── upload.html         # UI for file upload and results
+└── README.md
 
-└─ README.md
+## How to Run the Project
+
+Clone the repository
+
+Create and activate a virtual environment
+
+## Install dependencies
+
+pip install -r requirements.txt
 
 
+## Run the Flask application
+
+python app.py
+
+
+## Open your browser and go to:
+
+http://127.0.0.1:5000
