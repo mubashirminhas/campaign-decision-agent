@@ -33,9 +33,11 @@ These rules are implemented to mimic how marketing teams evaluate campaign effic
 
 ## Application Screenshots
 Before Data Upload
+![Before Data Loading](Before_Data_Loading.png) 
 
 After Data Upload and Decision Results
-
+ ![After Data Loading](After_Data_Loading.png)
+ 
 ## Folder Structure
 agent_api/
 │
@@ -70,3 +72,4 @@ python app.py
 ## Open your browser and go to:
 
 http://127.0.0.1:5000
+
