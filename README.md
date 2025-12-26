@@ -19,6 +19,16 @@ Upload campaign data (CSV), get **rule-based decisions**, view results in a **dy
 - ELIF CPC < 5 → OPTIMIZE
 - ELSE → PAUSE
 
+## 📸 Application Screenshots
+
+### Before Data Upload
+![Before Data Loading](Before_Data_Loading.png)
+<img width="1909" height="1077" alt="before_screenshot" src="https://github.com/user-attachments/assets/e7c98881-2dc7-4a92-9f91-7ea0fed2f9d4" />
+
+### After Data Upload & Decision Results
+![After Data Loading](After_Data_Loading.png)
+<img width="1299" height="901" alt="after_screenshot" src="https://github.com/user-attachments/assets/069cbe4a-0b5c-4082-a8a6-0cf7cea02448" />
+
 
 ## **Folder Structure**
 
@@ -36,3 +46,4 @@ agent_api/
 │ └─ upload.html
 
 └─ README.md
+
