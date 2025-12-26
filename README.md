@@ -14,6 +14,11 @@ Upload campaign data (CSV), get **rule-based decisions**, view results in a **dy
 - Responsive and professional UI using flask & HTML.
 
 ---
+## Campaign (Business Rules)
+- IF CPC < 3 AND conversion_rate > 0.05 → SCALE
+- ELIF CPC < 5 → OPTIMIZE
+- ELSE → PAUSE
+
 
 ## **Folder Structure**
 
@@ -29,4 +34,5 @@ agent_api/
 │ └─ schemas.py
 ├─ templates/
 │ └─ upload.html
+
 └─ README.md
